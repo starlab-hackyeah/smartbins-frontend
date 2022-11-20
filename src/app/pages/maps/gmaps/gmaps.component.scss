@@ -1,0 +1,24 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  .route-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+
+  nb-card-body {
+    padding: 0;
+  }
+
+  ::ng-deep agm-map {
+    width: 100%;
+    height: nb-theme(card-height-large);
+  }
+}
+
+.map__marker__label {
+  background-color: red;
+}

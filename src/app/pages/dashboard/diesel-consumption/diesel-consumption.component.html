@@ -1,0 +1,15 @@
+<nb-card size="large">
+    <nb-card-header>Diesel Consumption</nb-card-header>
+    <nb-card-body>
+      <div class="chart-container" style="height: auto">
+        <div class="summary-container">
+            <div *ngFor="let item of chartPanelSummary">
+              <div>{{ item.title }}</div>
+              <div class="h6">{{ item.value }}</div>
+            </div>
+        </div>
+
+        <ngx-diesel-consumption-chart [profitChartData]="dieselConsumption" *ngIf="dieselConsumption"></ngx-diesel-consumption-chart>
+      </div>
+    </nb-card-body>
+  </nb-card>

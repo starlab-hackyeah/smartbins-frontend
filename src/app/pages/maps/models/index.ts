@@ -1,0 +1,1 @@
+export { IGoogleMarker } from './google-marker.model';

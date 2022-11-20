@@ -1,0 +1,16 @@
+<nb-card size="small">
+    <nb-card-header>
+        <span>Traffic Optimisation / Roadway Ware</span>
+    </nb-card-header>
+
+    <nb-list>
+        <nb-list-item class="item" *ngFor="let item of trafficListData">
+          <span>{{ item.date }}</span>
+          <span>{{ item.value }} Km</span>
+          <span class="delta" [class.up]="item.delta.up" [class.down]="!item.delta.up">
+            <nb-icon [icon]="item.delta.up ? 'arrow-up' : 'arrow-down'" pack="eva"></nb-icon>
+            {{ item.delta.value }}%
+          </span>
+        </nb-list-item>
+      </nb-list>
+</nb-card>
